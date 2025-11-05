@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 import Combine
 
-public protocol NavigationCoordinatable: Coordinatable {
+open protocol NavigationCoordinatable: Coordinatable {
     typealias Route = NavigationRoute
     typealias Root = NavigationRoute
     typealias Router = NavigationRouter<Self>
@@ -279,7 +279,7 @@ public protocol NavigationCoordinatable: Coordinatable {
     ) -> Output?
 }
 
-public extension NavigationCoordinatable {
+open extension NavigationCoordinatable {
     var routerStorable: Self {
         get {
             self
